@@ -1,0 +1,29 @@
+export const FRAME_COLORS = {
+	Artifact: [
+		'black',
+		'black-green',
+		'black-green-legendary',
+		'black-red',
+		'black-red-legendary',
+		'blue',
+		'blue-black',
+		'blue-black-legendary',
+		'gold',
+		'gold-legendary',
+		'green',
+		'green-blue',
+		'green-blue-legendary',
+		'green-white',
+		'green-white-legendary',
+		'red',
+		'red-green',
+		'red-green-legendary',
+		'red-white',
+		'red-white-legendary',
+		'white',
+		'white-black',
+		'white-black-legendary',
+		'white-blue',
+		'white-blue-legendary'
+	]
+};

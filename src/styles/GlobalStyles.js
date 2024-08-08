@@ -15,6 +15,9 @@ export const GlobalStyles = createGlobalStyle`
   body{
     margin: 0;
     font-family: sans-serif;
+    background-color: #1a1f23;
+    background-image: url('/images/background-pattern.jpg');
+    color: aliceblue;
   }
 
   a{
