@@ -25,4 +25,19 @@ const StyledCardImage = styled.img`
 	z-index: -1;
 `;
 
-export { StyledCard, StyledCardImage };
+const StyledTypeLine = styled.p`
+	position: absolute;
+	top: 290px;
+	font-size: 14px;
+`;
+
+const StyledCardText = styled.p`
+	position: absolute;
+	top: 320px;
+	width: 310px;
+	font-size: 14px;
+	/* font-family: 'matrix'; */
+	font-family: 'Crimson Text', serif;
+`;
+
+export { StyledCard, StyledCardImage, StyledCardText, StyledTypeLine };

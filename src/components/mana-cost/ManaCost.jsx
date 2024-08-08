@@ -7,8 +7,8 @@ const ManaCost = ({ cost }) => {
 
 	return (
 		<StyledSymbols>
-			{symbols.map(symbol => (
-				<img key={symbol} src={MANA_ICONS[symbol]} alt='' />
+			{symbols.map((symbol, index) => (
+				<img key={symbol + index} src={MANA_ICONS[symbol]} alt='' />
 			))}
 		</StyledSymbols>
 	);
