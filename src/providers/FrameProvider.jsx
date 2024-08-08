@@ -5,9 +5,12 @@ const FrameProvider = ({ children }) => {
 	const [frameCard, setFrameCard] = useState({
 		frameType: null,
 		frameColor: null,
-		cardTitle: ''
+		cardTitle: '',
+		cardImage: '',
+		manaCost: ''
 	});
 	console.log(frameCard);
+
 	return (
 		<FrameContext.Provider value={{ frameCard, setFrameCard }}>
 			{children}

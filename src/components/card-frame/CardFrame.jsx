@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { FRAME_COLORS } from '../../constants/frame-colors';
 import { FRAME_TYPES } from '../../constants/frame-types';
 import { FrameContext } from '../../contexts/FrameContext';
-import CardTitle from '../card-title/CardTitle';
+import CardTitle from '../card-info/CardInfo';
 
 const CardFrame = () => {
 	const { frameCard, setFrameCard } = useContext(FrameContext);
