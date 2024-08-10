@@ -7,7 +7,8 @@ const FrameProvider = ({ children }) => {
 		frameColor: null,
 		cardTitle: '',
 		cardImage: '',
-		manaCost: ''
+		manaCost: '',
+		textSize: 16
 	});
 	console.log(frameCard);
 

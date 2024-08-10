@@ -1,11 +1,11 @@
 import { toPng } from 'html-to-image';
 import { useContext, useRef } from 'react';
 import { FrameContext } from '../../contexts/FrameContext';
+import CardText from '../card-text/CardText';
 import ManaCost from '../mana-cost/ManaCost';
 import {
 	StyledCard,
 	StyledCardImage,
-	StyledCardText,
 	StyledTypeLine
 } from './card-generator.styles';
 
@@ -28,7 +28,7 @@ const CardGenerator = () => {
 				</div>
 				<StyledCardImage src={frameCard.cardImage} alt='' />
 				<StyledTypeLine>{frameCard.typeLine}</StyledTypeLine>
-				<StyledCardText>{frameCard.cardText}</StyledCardText>
+				<CardText text={frameCard.cardText} />
 			</StyledCard>
 
 			<button onClick={() => generateImage(cardRef, frameCard)}>

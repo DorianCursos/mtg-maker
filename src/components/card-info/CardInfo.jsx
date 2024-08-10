@@ -1,4 +1,4 @@
-import { Fragment, useContext } from 'react';
+import { useContext } from 'react';
 import { FrameContext } from '../../contexts/FrameContext';
 
 const CardInfo = () => {
@@ -15,6 +15,27 @@ const CardInfo = () => {
 			<button onClick={() => getInfoCard(frameCard, setFrameCard)}>
 				Get Info Card
 			</button>
+			<br />
+			<textarea
+				name='card-text'
+				id='card-text'
+				rows={10}
+				cols={45}
+				value={frameCard.cardText}
+				onChange={event =>
+					setFrameCard({ ...frameCard, cardText: event.target.value })
+				}
+			/>
+			<div>
+				<label htmlFor='text-size'>Text Size</label>
+				<input
+					type='number'
+					defaultValue={12}
+					onChange={event =>
+						setFrameCard({ ...frameCard, textSize: event.target.value })
+					}
+				/>
+			</div>
 		</>
 	);
 };
@@ -40,20 +61,13 @@ const getInfoCard = async (frameCard, setFrameCard) => {
 			cardImage: cardInfo.image_uris.art_crop,
 			manaCost: cardInfo.mana_cost,
 			typeLine: cardInfo.printed_type_line || cardInfo.type_line,
-			cardText: formatText(cardInfo.printed_text || cardInfo.oracle_text)
+			cardText: cardInfo.printed_text || cardInfo.oracle_text
 		});
+
+		console.log(cardInfo.printed_text);
 	} catch (error) {
 		console.error('Failed to fetch card info:', error);
 	}
-};
-
-const formatText = text => {
-	return text.split('\n').map((line, index) => (
-		<Fragment key={index}>
-			{line}
-			<br />
-		</Fragment>
-	));
 };
 
 export default CardInfo;

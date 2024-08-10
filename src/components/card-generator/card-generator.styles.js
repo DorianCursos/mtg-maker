@@ -27,17 +27,8 @@ const StyledCardImage = styled.img`
 
 const StyledTypeLine = styled.p`
 	position: absolute;
-	top: 290px;
+	top: 286px;
 	font-size: 14px;
 `;
 
-const StyledCardText = styled.p`
-	position: absolute;
-	top: 320px;
-	width: 310px;
-	font-size: 14px;
-	/* font-family: 'matrix'; */
-	font-family: 'Crimson Text', serif;
-`;
-
-export { StyledCard, StyledCardImage, StyledCardText, StyledTypeLine };
+export { StyledCard, StyledCardImage, StyledTypeLine };

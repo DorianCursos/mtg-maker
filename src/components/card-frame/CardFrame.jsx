@@ -6,6 +6,7 @@ import CardTitle from '../card-info/CardInfo';
 
 const CardFrame = () => {
 	const { frameCard, setFrameCard } = useContext(FrameContext);
+	console.log(frameCard);
 	return (
 		<div>
 			<h2>Select Card Frame</h2>
@@ -16,7 +17,7 @@ const CardFrame = () => {
 			>
 				<option value='default'>Select frame type</option>
 				{FRAME_TYPES.map(frame => (
-					<option key={frame} value={frame}>
+					<option key={frame} value={frame.toLowerCase()}>
 						{frame}
 					</option>
 				))}
