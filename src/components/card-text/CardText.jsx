@@ -5,8 +5,10 @@ import { StyledCardText, StyledContainerCardText } from './card-text.styles';
 
 const CardText = ({ text }) => {
 	const { frameCard } = useContext(FrameContext);
-	const formattedText = formatText(text, frameCard);
 
+	if (!text) return;
+
+	const formattedText = formatText(text, frameCard);
 	return <StyledContainerCardText>{formattedText}</StyledContainerCardText>;
 };
 
