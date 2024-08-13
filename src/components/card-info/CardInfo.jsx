@@ -36,6 +36,17 @@ const CardInfo = () => {
 					}
 				/>
 			</div>
+			<input
+				type='range'
+				name='text-width'
+				id='text-width'
+				min={100}
+				max={280}
+				defaultValue={280}
+				onInput={event =>
+					setFrameCard({ ...frameCard, textWidth: event.target.value })
+				}
+			/>
 		</>
 	);
 };

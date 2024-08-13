@@ -8,7 +8,8 @@ const FrameProvider = ({ children }) => {
 		cardTitle: '',
 		cardImage: '',
 		manaCost: '',
-		textSize: 16
+		textSize: 12,
+		textWidth: 280
 	});
 	console.log(frameCard);
 

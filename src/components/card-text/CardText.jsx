@@ -5,11 +5,18 @@ import { StyledCardText, StyledContainerCardText } from './card-text.styles';
 
 const CardText = ({ text }) => {
 	const { frameCard } = useContext(FrameContext);
+	console.log(frameCard.textWidth);
 
 	if (!text) return;
 
 	const formattedText = formatText(text, frameCard);
-	return <StyledContainerCardText>{formattedText}</StyledContainerCardText>;
+	return (
+		<>
+			<StyledContainerCardText $textWidth={frameCard.textWidth}>
+				{formattedText}
+			</StyledContainerCardText>
+		</>
+	);
 };
 
 // Reemplazar símbolos de maná con imágenes
@@ -36,7 +43,7 @@ const formatText = (text, frameCard) => {
 	const textToArray = text.split('\n');
 
 	return textToArray.map((line, index) => (
-		<StyledCardText key={index} $textSize={frameCard.textSize}>
+		<StyledCardText key={index} $textSize={frameCard.textSize || 12}>
 			{replaceManaSymbols(line)}
 		</StyledCardText>
 	));

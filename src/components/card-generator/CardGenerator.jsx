@@ -1,6 +1,8 @@
 import { toPng } from 'html-to-image';
 import { useContext, useRef } from 'react';
+import { POWER_THOUGNESS } from '../../constants/power-thougness';
 import { FrameContext } from '../../contexts/FrameContext';
+import CardPowerThougness from '../card-power-thougness/CardPowerThougness';
 import CardText from '../card-text/CardText';
 import ManaCost from '../mana-cost/ManaCost';
 import {
@@ -11,6 +13,7 @@ import {
 
 const CardGenerator = () => {
 	const { frameCard, setFrameCard } = useContext(FrameContext);
+
 	const cardRef = useRef(null);
 
 	if (!frameCard.frameType || !frameCard.frameColor) return;
@@ -28,7 +31,8 @@ const CardGenerator = () => {
 				</div>
 				<StyledCardImage src={frameCard.cardImage} alt='' />
 				<StyledTypeLine>{frameCard.typeLine}</StyledTypeLine>
-				<CardText text={frameCard.cardText} />
+				<CardText text={frameCard.cardText} textWidth={frameCard.textWidth} />
+				<CardPowerThougness src={POWER_THOUGNESS.GOLD_1} />
 			</StyledCard>
 
 			<button onClick={() => generateImage(cardRef, frameCard)}>
